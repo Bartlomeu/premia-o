@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seu Prêmio</title>
+    <style>
+
+body { 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: #f0f0f0;
+                    font-family: Arial, sans-serif;
+                    background-image: linear-gradient(45deg, #000000 25%, transparent 25%), 
+                                      linear-gradient(-45deg, #000000 25%, transparent 25%), 
+                                      linear-gradient(45deg, transparent 75%, #000000 75%), 
+                                      linear-gradient(-45deg, transparent 75%, #000000 75%);
+                    background-size: 40px 40px;
+                    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+                }
+        .button-container {
+            text-align: center;
+        }
+        
+    
+        .image-container {
+            margin-top: 20px;
+            display: none;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .message {
+            display: none;
+            font-size: 24px;
+            color: #a54a00;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container">
+        <button class="button" id="showImageButton"><a>Antonio, clique aqui</a></button>
+        <div class="image-container" id="imageContainer">
+            <img class="baro" width="300px" src="Trofeu.png" alt="Imagem Exemplo">
+        </div>
+        <div class="som" id="meuSom" ><audio src="Aplausos.mp3"></audio></div>
+        <div class="message" id="congratsMessage"><b><textarea class="cor">Parabéns, você ganhou!</textarea></b></div>
+    </div>
+
+          
+
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+           
+
+
+        document.getElementById('showImageButton').addEventListener('click', function() {
+
+
+            var audio = new 
+            Audio('Aplausos.mp3');
+            audio.play();
+            // Mostrar a imagem
+            document.getElementById('imageContainer').style.display = 'block';
+            
+            // Mostrar a mensagem de parabéns
+            document.getElementById('congratsMessage').style.display = 'block';
+
+            document.getElementById('meuSom').style.display = 'block';
+            
+           
+            
+
+            // Iniciar a explosão de confete
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+          
+
+        });
+    </script>
+</body>
+</html>

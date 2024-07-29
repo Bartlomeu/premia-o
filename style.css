@@ -1,0 +1,95 @@
+
+ 
+ body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-color: #f0f0f0;
+     font-family: Arial, sans-serif;
+ }
+ .button-container {
+     text-align: center;
+ }
+ .button {
+     padding: 10px 20px;
+     font-size: 16px;
+     background-color: #3498db;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     text-align: right;
+ }
+ .button:hover {
+     background-color: #2980b9;
+ }
+
+.button{
+    
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #ff5252;
+        border: 2px solid #000;
+        border-radius: 10px;
+        box-shadow: 5px 5px 0px #000;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    
+     
+}
+.cor{
+    color: rgb(5, 34, 5);
+
+}
+
+a{
+    color: black;
+}
+
+.baro{
+    
+
+        animation: girar 3s linear;
+    }
+    
+    
+    
+    
+     @keyframes girar {
+        100%{
+             transform: 
+             rotate(360deg);
+        }
+    
+      
+     }
+
+.message{
+       animation: piscar 3s infinite;
+}
+
+@keyframes piscar {
+    0%,100% { opacity: 3; }
+    50% {opacity: 0;};
+
+ 
+
+}
+
+
+@media screen and { (max-width: 500px);
+
+    
+}
+   
+
+
+ 
+
